@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+,com.template.ms_auth.service,AuthService,3,0,0,0,1,0,1,0,1,0
+,com.template.ms_auth.service,JwtService,3,0,0,0,1,0,1,0,1,0
+,org.openapitools.api,ApiUtil,27,0,0,0,9,0,2,0,2,0
+,org.openapitools.api,AuthApi,43,0,4,0,11,0,6,0,4,0
+,org.openapitools.model,LoginRequest,130,0,12,0,33,0,18,0,12,0
+,org.openapitools.model,AuthResponse,121,0,12,0,28,0,17,0,11,0
+,com.template.ms_auth,MsAuthApplication,5,3,0,0,2,1,1,1,1,1
+,com.template.ms_auth.config,SecurityConfig,3,0,0,0,1,0,1,0,1,0
+,com.template.ms_auth.repository,UserRepository,3,0,0,0,1,0,1,0,1,0
+,com.template.ms_auth.controller,AuthController,3,0,0,0,1,0,1,0,1,0
+,com.template.ms_auth.security,CustomUserDetailsService,3,0,0,0,1,0,1,0,1,0

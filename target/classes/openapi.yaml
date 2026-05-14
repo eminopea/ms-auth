@@ -1,0 +1,133 @@
+openapi: 3.0.3
+
+info:
+  title: Auth Service API
+  version: 1.0.0
+
+paths:
+
+  /auth/login:
+    post:
+      tags:
+        - Auth
+      summary: Login de usuario
+      operationId: login
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+
+      responses:
+        '200':
+          description: Token JWT generado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+
+  /auth/validate:
+    get:
+      tags:
+        - Auth
+      summary: Validar token
+      operationId: validateToken
+
+      security:
+        - bearerAuth: []
+
+      responses:
+        '200':
+          description: Token válido
+
+  /auth/register:
+    post:
+      tags:
+        - Auth
+      summary: Registrar usuario
+      operationId: register
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+
+      responses:
+        '201':
+          description: Usuario creado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+
+components:
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+
+    LoginRequest:
+      type: object
+      required: [username, password]
+
+      properties:
+        username:
+          type: string
+
+        password:
+          type: string
+
+    AuthResponse:
+      type: object
+
+      properties:
+        token:
+          type: string
+
+        type:
+          type: string
+          example: Bearer
+
+    RegisterRequest:
+      type: object
+
+      required:
+        - username
+        - password
+
+      properties:
+        username:
+          type: string
+
+        password:
+          type: string
+
+        roles:
+          type: array
+
+          items:
+            type: string
+
+    UserResponse:
+      type: object
+
+      properties:
+        id:
+          type: string
+
+        username:
+          type: string
+
+        roles:
+          type: array
+
+          items:
+            type: string
