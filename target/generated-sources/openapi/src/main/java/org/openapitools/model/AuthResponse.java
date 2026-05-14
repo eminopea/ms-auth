@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * AuthResponse
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-05-14T09:27:05.952460500-05:00[America/Lima]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-05-14T12:10:58.905251900-05:00[America/Lima]")
 public class AuthResponse {
 
   private String token;
