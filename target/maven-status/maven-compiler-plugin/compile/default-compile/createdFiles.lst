@@ -1,0 +1,6 @@
+org\openapitools\model\AuthResponse.class
+com\template\ms_auth\service\AuthService.class
+org\openapitools\model\LoginRequest.class
+org\openapitools\api\AuthApi.class
+com\template\ms_auth\controller\AuthController.class
+org\openapitools\api\ApiUtil.class
