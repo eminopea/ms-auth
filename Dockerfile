@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY target/*.jar ms-auth.jar
 
-EXPOSE 7082
+EXPOSE 7081
 
 ENTRYPOINT ["java","-jar","ms-auth.jar"]
